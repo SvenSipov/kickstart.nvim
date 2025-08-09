@@ -2,7 +2,7 @@ return {
   'L3MON4D3/LuaSnip',
   config = function()
     require('luasnip.loaders.from_lua').lazy_load {
-      paths = { '~/.config/nvim/lua/snippets' },
+      paths = { vim.fn.stdpath 'config' .. '/lua/snippets' },
     }
   end,
 }
